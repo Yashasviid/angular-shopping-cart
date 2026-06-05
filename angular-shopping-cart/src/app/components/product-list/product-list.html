@@ -1,0 +1,41 @@
+<section class="products-section">
+  <div class="section-header">
+    <h1 class="seo-title" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Happy Shopping - Premium Workspace Decor</h1>
+    <h2 class="section-title">Ecosystem Collection</h2>
+    <p class="section-subtitle">Happy Shopping! Upgrade your desk with our unified white and sky blue aesthetic</p>
+  </div>
+
+  <div class="products-grid">
+    @for (product of products; track product.id) {
+      <article class="product-card">
+        <div class="product-image-wrapper">
+          <img [src]="product.image" [alt]="product.name" class="product-image" loading="lazy" />
+          <span class="product-category">{{ product.category }}</span>
+        </div>
+
+        <div class="product-info">
+          <div class="product-rating">
+            <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <span class="rating-value">{{ product.rating.rate }}</span>
+            <span class="rating-count">({{ product.rating.count }})</span>
+          </div>
+
+          <h3 class="product-name">{{ product.name }}</h3>
+          <p class="product-description">{{ product.description }}</p>
+
+          <div class="product-footer">
+            <span class="product-price">Rs. {{ product.price }}</span>
+            <button class="add-to-cart-btn" (click)="addToCart(product)" aria-label="Add product to cart">
+              <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+              <span>Add to Cart</span>
+            </button>
+          </div>
+        </div>
+      </article>
+    }
+  </div>
+</section>
