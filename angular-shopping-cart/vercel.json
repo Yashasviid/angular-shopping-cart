@@ -1,6 +1,6 @@
 {
   "buildCommand": "ng build",
-  "outputDirectory": "angular-shopping-cart/dist/angular-shopping-cart",
+  "outputDirectory": "dist/angular-shopping-cart/browser",
   "rewrites": [
     {
       "source": "/(.*)",
