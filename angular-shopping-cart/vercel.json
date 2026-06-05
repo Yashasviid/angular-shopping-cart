@@ -1,1 +1,9 @@
-﻿{"outputDirectory":"dist/angular-shopping-cart","rewrites":[{"source":"/(.*)","destination":"/index.html"}]}
+{
+  "outputDirectory": "dist/angular-shopping-cart",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
